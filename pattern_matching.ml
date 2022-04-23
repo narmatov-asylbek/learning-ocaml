@@ -48,3 +48,20 @@ let rec sum = function
   | [] -> 0
   | h :: t -> h + (sum t);;
 
+
+
+type car_color = Red | Blue | Green;;
+
+type point = float * float;;
+
+type shape = 
+  | Circle of {center: point; radius: float}
+  | Rectangle of {left: float; right: float}
+
+
+let c1 = Circle {center = (0., 0.); radius = 1.};;
+let c2 = Rectangle {left = 20.; right = 40.1};;
+
+let g2 = function
+  | Circle {center; radius} -> center
+  | Rectangle {left; right} -> (20., 20.);;
